@@ -1,15 +1,17 @@
-let btnContinuar = document.getElementById("btn_continuar");
 
-let juego  = document.getElementById("juego");
+document.addEventListener("DOMContentLoaded", function() {
+    let btnContinuar = document.getElementById("btn_continuar");
+    let juego = document.getElementById("juego");
+    let resultado = document.getElementById("resultado");
+    let inputNumber = document.getElementById("input_number");
+    let btnEnviar = document.getElementById("btn_enviar");
 
-let resultado = document.getElementById("resultado");
+    if (!btnContinuar || !juego) {
+        console.error("No se encontraron los elementos necesarios para iniciar el juego.", { btnContinuar, juego });
+        return;
+    }
 
-let inputNumber = document.getElementById("input_number");
-
-let btnEnviar  =  document.getElementById("btn_enviar");
-
-
-btnContinuar.addEventListener("click", function(){
-    juego.classList.add("visible");
+    btnContinuar.addEventListener("click", function() {
+        juego.classList.add("visible");
+    });
 });
-
