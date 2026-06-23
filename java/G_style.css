@@ -1,0 +1,6 @@
+#juego {
+    display: none;
+}
+.visible{
+    display: block;
+}
