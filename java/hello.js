@@ -8,20 +8,27 @@ document.addEventListener("DOMContentLoaded", function() {
     let btnJugarNuevo = document.getElementById("btn_jugar_nuevo");
     let numeroSecreto;
     let intentos = 0;
+    let inicio = document.getElementById("inicio")
+
 
     if (!btnContinuar || !juego) {
         console.error("No se encontraron los elementos necesarios para iniciar el juego.", { btnContinuar, juego });
         return;
     }
-
     btnContinuar.addEventListener("click", function() {
         juego.classList.add("visible");
         numeroSecreto = Math.floor(Math.random() * 10) + 1
         btnJugarNuevo.style.display = "none";
+        inicio.classList.add("oculto");
     });
-//este es para elegir el numero y comparar la respuesta del usuario
+        //este es para elegir el numero y comparar la respuesta del usuario
     btnEnviar.addEventListener("click", function(){
     let respuestaUsuario = inputNumber.value
+    if (respuestaUsuario <=1 || respuestaUsuario > 10)
+    {
+        resultado.textContent = "Porfavor, scribe un numero entre 1 y 10";
+        return;
+    }
     if (respuestaUsuario == numeroSecreto)
     {
         resultado.textContent = "Ganaste, pura suerte -_-!"
@@ -47,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
         intentos = 0;
         inputNumber.value = "";
         numeroSecreto = Math.floor(Math.random() * 10) + 1;
-        resultado.textContent = "";
+        resultado.textContent = "Intenta de nuevo!!";
         inputNumber.disabled = false;
         btnEnviar.disabled = false;
         btnJugarNuevo.style.display = "none";

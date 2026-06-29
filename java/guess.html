@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego de adivinar el numero</title>
     <link rel="stylesheet" href="G_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div>
+    <div id="inicio">
         <h1>Adivina el numero!</h1>
-        <p>El juego es simple la computadora elije un numero, Tendras 3 intentos!, cada ronda sera un nuevo numero</p>
+        <p>El juego es simple la computadora elije un numero, Tendras 3 intentos!, cada ronda sera un nuevo numero!</p>
         <button id="btn_continuar">Continuar</button>
     </div>
 
     <div id="juego">
             <h2>Dime que numero estoy pensando</h2>
-            <p id="resultado"></p>
+            <p id="resultado">Dime un numero</p>
             <input type="number" id="input_number">
             <button id="btn_enviar">Enviar</button>
-            <button id="btn_jugar_nuevo"></button>
+            <button id="btn_jugar_nuevo">Jugar de nuevo</button>
     </div>
     <script src="hello.js"></script>
 </body>
